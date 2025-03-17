@@ -1,0 +1,7 @@
+{
+  "name": "ComicInteractivo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
