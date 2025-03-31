@@ -4,10 +4,10 @@ import { CommonModule } from '@angular/common';
 import { NavigationButtonsComponent } from 'src/app/navigation-buttons/navigation-buttons.component'
 
 @Component({
-  selector: 'app-tab1',
+  selector: 'app-tab5',
   standalone: true,
   imports: [CommonModule, IonicModule, NavigationButtonsComponent],
-  templateUrl: './tab1.page.html',
-  styleUrls: ['./tab1.page.scss'],
+  templateUrl: './tab5.page.html',
+  styleUrls: ['./tab5.page.scss'],
 })
-export class Tab1Page {}
+export class Tab5Page {}

@@ -1,0 +1,19 @@
+<ion-content>
+  <div class="comic-container">
+    <!-- Botón para retroceder -->
+    <ion-button fill="clear" (click)="retrocederPagina()" *ngIf="pagina > 1">
+      ←
+    </ion-button>
+
+    <!-- Imagen del cómic -->
+    <img [src]="'assets/comics/pagina' + pagina + '.jpg'" alt="Página {{ pagina }}">
+
+    <!-- Contador de páginas -->
+    <span class="page-counter">{{ pagina }}/{{ totalPaginas }}</span>
+
+    <!-- Botón para avanzar -->
+    <ion-button fill="clear" (click)="avanzarPagina()" *ngIf="pagina < totalPaginas">
+      →
+    </ion-button>
+  </div>
+</ion-content>
