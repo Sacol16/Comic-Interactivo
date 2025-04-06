@@ -1,34 +1,34 @@
 :root {
-    --ion-page-transition: none;
-    --ion-page-transition-duration: 0ms;
-  }  
+  --ion-page-transition: none;
+  --ion-page-transition-duration: 0ms;
+}  
 .footer-buttons {
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* Más espacio entre los botones */
-  }
-  
-  .nav-button {
-    width: 120px; /* Tamaño del botón */
-    height: 50px;
-    border-radius: 50%;
-    background-size: 120%; /* Hace que la imagen ocupe el 70% del botón */
-    background-position: center;
-    background-repeat: no-repeat;
-    border: none;
-  }
-  
-  .next {
-    background-image: url('/assets/Imagenes/Siguiente.png'); /* Imagen de siguiente */
-  }
-  
-  .prev {
-    background-image: url('/assets/Imagenes/Anterior.png'); /* Imagen de anterior */
-  }
-  
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* Más espacio entre los botones */
+}
+
+.nav-button {
+  width: 52px; /* Tamaño del botón */
+  height: 38px;
+  border-radius: 15%;
+  background-size: 120%; /* Hace que la imagen ocupe el 70% del botón */
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+}
+
+.next {
+  background-image: url('/assets/Imagenes/BotonAvanzar.png'); /* Imagen de siguiente */
+}
+
+.prev {
+  background-image: url('/assets/Imagenes/BotonRetroceder.png'); /* Imagen de anterior */
+}
+
 /* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
 
@@ -46,11 +46,11 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 /**
- * Ionic Dark Mode
- * -----------------------------------------------------
- * For more info, please see:
- * https://ionicframework.com/docs/theming/dark-mode
- */
+* Ionic Dark Mode
+* -----------------------------------------------------
+* For more info, please see:
+* https://ionicframework.com/docs/theming/dark-mode
+*/
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
