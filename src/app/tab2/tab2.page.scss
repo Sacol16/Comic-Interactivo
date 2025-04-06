@@ -1,0 +1,50 @@
+.comic-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding-bottom: 70px;
+  
+    .fila {
+      display: flex;
+      gap: 8px;
+    }
+  
+    .fila1 {
+      .v1 {
+        width: 100%;
+        aspect-ratio: 2 / 1.2;
+      }
+    }
+  
+    .fila2 {
+      .v2 {
+        width: 45%;
+        aspect-ratio: 0.9 / 2;
+      }
+      .v3 {
+        width: 55%;
+        aspect-ratio: 1.1 / 2;
+      }
+    }
+  
+    .fila3 {
+      .v4 {
+        width: 55%;
+        aspect-ratio: 1.1 / 1;
+      }
+      .v5 {
+        width: 45%;
+        aspect-ratio: 0.9 / 1;
+      }
+    }
+  
+    .vineta {
+      object-fit: cover;
+      border-radius: 10px;
+      display: block;
+    }
+  }
+  
