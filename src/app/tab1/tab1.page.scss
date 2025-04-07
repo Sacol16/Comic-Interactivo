@@ -1,10 +1,27 @@
-:host{
-    background-color: white;
-}
+.pantalla {
+    background-image: url('../../assets/Imagenes/fondo.png'); // reemplaza con tu imagen
+    background-size: cover;        // la imagen cubre todo el fondo
+    background-position: center;   // centrada
+    background-repeat: no-repeat;  // no se repite
+    min-height: 100vh;             // ocupa toda la altura de la pantalla
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;       // opcional, si quieres centrar verticalmente también
+    text-align: center;
+    padding: 20px;
+  }
+  
 
 .boton {
     display: flex;
     justify-content: center;
+
+}
+.boton2 {
+    display: flex;
+    justify-content: center;
+    padding-top: 70%;
 
 }
 

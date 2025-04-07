@@ -1,0 +1,25 @@
+.titulo {
+    display: flex;
+    justify-content: center;
+}
+
+:host{
+    display: flex;
+    align-items: center;
+}
+
+ion-content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contenido-centrado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  

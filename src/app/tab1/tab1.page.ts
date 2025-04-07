@@ -17,5 +17,9 @@ export class Tab1Page {
   irATab2() {
     this.router.navigate(['/tabs/tab2']);
   }
+
+  irATab10() {
+    this.router.navigate(['/tabs/tab10']);
+  }
 }
 
