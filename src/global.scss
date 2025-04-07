@@ -1,24 +1,32 @@
 :root {
   --ion-page-transition: none;
   --ion-page-transition-duration: 0ms;
-}  
+}
+
 .footer-buttons {
-  position: absolute;
+  position: fixed; /* Cambiado de absolute a fixed */
   bottom: 20px;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   gap: 30px; /* Más espacio entre los botones */
+  z-index: 9999; /* Aseguramos que esté por encima de otros elementos */
+  pointer-events: auto; /* Por si alguna capa lo bloquea */
+  align-items: center;
 }
+
+
 
 .nav-button {
   width: 52px; /* Tamaño del botón */
   height: 38px;
   border-radius: 15%;
-  background-size: 120%; /* Hace que la imagen ocupe el 70% del botón */
+  background-size: 120%; /* Hace que la imagen ocupe el 120% del botón */
   background-position: center;
   background-repeat: no-repeat;
   border: none;
+  cursor: pointer; /* Mejora la experiencia del usuario */
 }
 
 .next {
@@ -27,6 +35,9 @@
 
 .prev {
   background-image: url('/assets/Imagenes/BotonRetroceder.png'); /* Imagen de anterior */
+}
+ion-header, ion-toolbar {
+  padding-top: env(safe-area-inset-top);
 }
 
 /* Core CSS required for Ionic components to work properly */

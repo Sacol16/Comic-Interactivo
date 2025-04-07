@@ -6,7 +6,7 @@
 
 
 
-<ion-content fullscreen class="ion-padding">
+<ion-content fullscreen = "false" class="ion-padding">
   <div class="comic-grid">
   <div class="fila fila1">
     <img src="assets/comics/pagina1/vineta1.jpg" class="vineta v1" />
@@ -21,6 +21,8 @@
   </div>
 </div>
 
-  <app-navigation-buttons prevPage="/tabs/tab1" nextPage="/tabs/tab3"></app-navigation-buttons>
+
+  <app-navigation-buttons prevPage="/tabs/tab1" nextPage="/tabs/tab3" 
+                          [currentPage]="1" [totalPages]="17"></app-navigation-buttons>
 </ion-content>
 

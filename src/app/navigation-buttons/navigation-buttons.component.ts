@@ -10,6 +10,9 @@ import { CommonModule } from '@angular/common';
   template: `
 <div class="footer-buttons">
   <div *ngIf="prevPage" class="nav-button prev" (click)="navigate(prevPage)"></div>
+
+  <div class="page-counter">{{ currentPage }}/{{ totalPages }}</div>
+
   <div *ngIf="nextPage" class="nav-button next" (click)="navigate(nextPage)"></div>
 </div>
   `,
@@ -18,6 +21,8 @@ import { CommonModule } from '@angular/common';
 export class NavigationButtonsComponent {
   @Input() prevPage?: string;
   @Input() nextPage?: string;
+  @Input() currentPage: number = 1; // Página actual
+  @Input() totalPages: number = 1; // Total de páginas
 
   constructor(private router: Router) {}
 
