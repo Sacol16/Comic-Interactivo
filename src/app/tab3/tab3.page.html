@@ -7,19 +7,22 @@
 <ion-content fullscreen class="ion-padding">
   <div class="comic-grid">
   <div class="fila fila1">
-    <img src="assets/comics/pagina2/vineta1.jpg" class="vineta v1" />
+    <img src="assets/comics/pagina2/vineta1.jpg" class="vineta v1" (click)="toggleImageSize($event)"/>
   </div>
   <div class="fila fila2">
-    <img src="assets/comics/pagina2/vineta2.jpg" class="vineta v2" />
-    <img src="assets/comics/pagina2/vineta3.jpg" class="vineta v3" />
+    <img src="assets/comics/pagina2/vineta2.jpg" class="vineta v2" (click)="toggleImageSize($event)"/>
+    <img src="assets/comics/pagina2/vineta3.jpg" class="vineta v3" (click)="toggleImageSize($event)"/>
   </div>
   <div class="fila fila3">
-    <img src="assets/comics/pagina2/vineta4.jpg" class="vineta v4" />
+    <img src="assets/comics/pagina2/vineta4.jpg" class="vineta v4" (click)="toggleImageSize($event)"/>
     
   </div>
 </div>
 
 <app-navigation-buttons prevPage="/tabs/tab2" nextPage="/tabs/tab4" 
 [currentPage]="2" [totalPages]="17"></app-navigation-buttons>
+<div *ngIf="zoomedImgSrc" class="zoom-overlay" (click)="closeZoom()">
+  <img [src]="zoomedImgSrc" class="zoomed-image" />
+</div>
 </ion-content>
   
