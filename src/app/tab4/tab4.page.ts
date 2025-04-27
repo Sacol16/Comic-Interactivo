@@ -10,4 +10,25 @@ import { NavigationButtonsComponent } from 'src/app/navigation-buttons/navigatio
   templateUrl: './tab4.page.html',
   styleUrls: ['./tab4.page.scss'],
 })
-export class Tab4Page {}
+export class Tab4Page {
+  zoomedImgSrc: string | null = null;
+
+  toggleImageSize(event: Event) {
+    const img = event.target as HTMLImageElement;
+    this.zoomedImgSrc = img.src;
+
+    const comicGrid = document.querySelector('.comic-grid') as HTMLElement;
+    if (comicGrid) {
+      comicGrid.classList.add('blur');
+    }
+  }
+
+  closeZoom() {
+    this.zoomedImgSrc = null;
+
+    const comicGrid = document.querySelector('.comic-grid') as HTMLElement;
+    if (comicGrid) {
+      comicGrid.classList.remove('blur');
+    }
+  }
+}
