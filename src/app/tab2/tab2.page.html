@@ -5,7 +5,8 @@
 </ion-header>
 
 <ion-content fullscreen="false" class="ion-padding">
-  <div class="comic-grid">
+  <div class="comic-grid" #comicGrid>
+
     <div class="fila fila1">
       <img src="assets/comics/pagina1/vineta1.jpg" class="vineta v1" (click)="toggleImageSize($event)" />
     </div>
@@ -22,6 +23,5 @@
   <app-navigation-buttons prevPage="/tabs/tab1" nextPage="/tabs/tab3" 
                           [currentPage]="1" [totalPages]="17"></app-navigation-buttons>
   <app-zoom-image [zoomedImgSrc]="zoomedImgSrc" [closeZoomCallback]="closeZoom.bind(this)"></app-zoom-image>
-
 
 </ion-content>
