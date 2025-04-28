@@ -21,8 +21,7 @@
 
   <app-navigation-buttons prevPage="/tabs/tab1" nextPage="/tabs/tab3" 
                           [currentPage]="1" [totalPages]="17"></app-navigation-buttons>
-  <div *ngIf="zoomedImgSrc" class="zoom-overlay" (click)="closeZoom()">
-    <img [src]="zoomedImgSrc" class="zoomed-image" />
-  </div>
+  <app-zoom-image [zoomedImgSrc]="zoomedImgSrc" [closeZoomCallback]="closeZoom.bind(this)"></app-zoom-image>
+
 
 </ion-content>
