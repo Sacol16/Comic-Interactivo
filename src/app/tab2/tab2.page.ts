@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { NavigationButtonsComponent } from 'src/app/navigation-buttons/navigation-buttons.component';
-import { ZoomImageComponent } from 'src/app/zoom-image/zoom-image.component'; // <-- Importa el componente
-import { ZoomablePage } from '../zoom-image/zoomable-page';
+import { ZoomImageComponent } from 'src/app/zoom-image/zoom-image.component'; 
+import { ZoomablePage } from '../zoom-image/zoomable-page'; 
 
 @Component({
   selector: 'app-tab2',
@@ -13,5 +13,5 @@ import { ZoomablePage } from '../zoom-image/zoomable-page';
   styleUrls: ['./tab2.page.scss'],
 })
 export class Tab2Page extends ZoomablePage {
-  // NO escribes toggleImageSize ni closeZoom aquí
+  @ViewChild('comicGrid', { static: true }) override comicGridRef!: ElementRef<HTMLDivElement>;
 }
