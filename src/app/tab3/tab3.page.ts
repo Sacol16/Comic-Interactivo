@@ -14,4 +14,11 @@ import { ZoomablePage } from '../zoom-image/zoomable-page';
 })
 export class Tab3Page extends ZoomablePage{
   @ViewChild('comicGrid', { static: true }) override comicGridRef!: ElementRef<HTMLDivElement>;
+
+  playCrashSound() {
+    const crashAudio = new Audio('assets/Audios/box-crash.mp3');
+    crashAudio.play().catch(err => {
+      console.warn('No se pudo reproducir el sonido de crash:', err);
+    });
+  }
 }
