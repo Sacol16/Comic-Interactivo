@@ -49,13 +49,13 @@
 }
 
 .fila2 .v2 {
-  width: 45%;
-  aspect-ratio: 0.9 / 2;
+  width: 40%;
+  aspect-ratio: 0.9 / 2; /* opcional, para mantener proporciones similares */
 }
 
 .fila2 .v3 {
-  width: 55%;
-  aspect-ratio: 1.1 / 2;
+  width: 60%;
+  aspect-ratio: 1.2 / 2; /* opcional, para que no se deforme */
 }
 
 .fila3 .v4 {

@@ -1,20 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
+import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/angular/standalone';
+import { NavigationButtonsComponent } from 'src/app/navigation-buttons/navigation-buttons.component'
+import { ZoomablePage } from '../zoom-image/zoomable-page';
+import { ZoomImageComponent } from '../zoom-image/zoom-image.component';
 
 @Component({
-  selector: 'app-tab8',
+  selector: 'app-tab5',
+  standalone: true,
+  imports: [CommonModule, IonicModule, NavigationButtonsComponent, ZoomImageComponent],
   templateUrl: './tab8.page.html',
   styleUrls: ['./tab8.page.scss'],
-  standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
-export class Tab8Page implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class Tab8Page extends ZoomablePage {
+  @ViewChild('comicGrid', { static: true }) override comicGridRef!: ElementRef<HTMLDivElement>;
 }

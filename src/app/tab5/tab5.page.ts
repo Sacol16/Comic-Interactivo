@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common';
 import { NavigationButtonsComponent } from 'src/app/navigation-buttons/navigation-buttons.component'
@@ -12,4 +12,6 @@ import { ZoomImageComponent } from '../zoom-image/zoom-image.component';
   templateUrl: './tab5.page.html',
   styleUrls: ['./tab5.page.scss'],
 })
-export class Tab5Page extends ZoomablePage {}
+export class Tab5Page extends ZoomablePage {
+  @ViewChild('comicGrid', { static: true }) override comicGridRef!: ElementRef<HTMLDivElement>;
+}

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="text-align: center;">Página 13/17</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <div class="comic-grid" #comicGrid>
+  <div class="fila fila1">
+    <img src="assets/comics/pagina13/vineta1.jpg" class="vineta v1" (click)="toggleImageSize($event)" />
+    <img src="assets/comics/pagina13/vineta2.jpg" class="vineta v2" (click)="toggleImageSize($event)" />
+  </div>
+  <div class="fila fila2">
+    
+    <img src="assets/comics/pagina13/vineta3.jpg" class="vineta v3" (click)="toggleImageSize($event)"/>
+  </div>
+  <div class="fila fila3">
+    <img src="assets/comics/pagina13/vineta4.jpg" class="vineta v4" (click)="toggleImageSize($event)"/>
+    
+  </div>
+</div>
+
+<app-navigation-buttons prevPage="/tabs/tab14" nextPage="/tabs/tab16"
+[currentPage]="13" [totalPages]="17"></app-navigation-buttons>
+<app-zoom-image [zoomedImgSrc]="zoomedImgSrc" [closeZoomCallback]="closeZoom.bind(this)"></app-zoom-image>
+
+</ion-content>
+  
+  
