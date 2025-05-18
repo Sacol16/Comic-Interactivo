@@ -42,21 +42,21 @@
 }
   
 .fila1 .v1 {
-  width: 100%;
-  aspect-ratio: 2 / 1.2;
+  width: 50%;
+  aspect-ratio: 1 / 1.2;
 }
         
-.fila2 .v2 {
-  width: 45%;
-  aspect-ratio: 0.9 / 1.8;
+.fila1 .v2 {
+  width: 50%;
+  aspect-ratio: 1 / 1.2;
 }
 .fila2 .v3 {
-  width: 55%;
-  aspect-ratio: 1.1 / 1.8;
+  width: 100%;
+  aspect-ratio: 2 / 1.8;
 }
     
 .fila3 .v4 {
-  width: max-width;
+  width: 100%;
   aspect-ratio: 2 / 1.2;
 }
       

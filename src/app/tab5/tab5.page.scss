@@ -1,0 +1,93 @@
+.comic-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding-bottom: 70px;
+  padding-top: 10px;
+  position: relative;
+}
+
+.comic-grid.blur {
+  filter: blur(5px);
+  pointer-events: none; /* Opcional: evita que hagan click en las imágenes de atrás mientras hay zoom */
+}
+
+
+.fila {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.vineta {
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.vineta.zoomed {
+  transform: scale(1.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  z-index: 9999;
+  max-width: 90%;
+  max-height: 90%;
+}
+  
+.fila1 .v1 {
+    
+    width: 100%;
+    aspect-ratio: 2 / 1.8;
+  }
+
+
+
+    
+.fila2 .v2 {
+  width: 55%;
+  aspect-ratio: 1 / 1.1; /* Puedes ajustar el ratio si cambia la forma */
+}
+
+.fila2 .v3 {
+  width: 45%;
+  aspect-ratio: 1 / 1.1;
+}
+
+
+.fila3 .v4 {
+    
+   
+    width: max-width;
+    aspect-ratio: 2 / 1.2;
+  }
+  
+
+  
+    
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* fondo oscuro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.zoomed-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
