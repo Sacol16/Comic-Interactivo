@@ -15,24 +15,13 @@ import { ZoomablePage } from '../zoom-image/zoomable-page';
 })
 export class Tab2Page extends ZoomablePage implements OnInit, OnDestroy {
   @ViewChild('comicGrid', { static: true }) override comicGridRef!: ElementRef<HTMLDivElement>;
+  private currentEffectAudio: HTMLAudioElement | null = null;
 
   private audio!: HTMLAudioElement; // <- solución al TS2564
 
   ngOnInit() {
-    this.audio = new Audio('assets/Audios/ambient-fantasy.mp3');
-    this.audio.loop = true;
-    this.audio.volume = 0.5;
-  
-    const startAudio = () => {
-      this.audio.play().catch(err => {
-        console.warn('No se pudo reproducir la música:', err);
-      });
-      document.removeEventListener('click', startAudio); // evitar múltiples llamadas
-    };
-  
-    document.addEventListener('click', startAudio);
+
   }
-  
 
   ngOnDestroy() {
     if (this.audio) {
@@ -41,10 +30,28 @@ export class Tab2Page extends ZoomablePage implements OnInit, OnDestroy {
     }
   }
 
-  playCrashSound() {
-    const crashAudio = new Audio('assets/Audios/Swish.mp3');
-    crashAudio.play().catch(err => {
-      console.warn('No se pudo reproducir el sonido de crash:', err);
-    });
+playSound(audioFile: string) {
+  // Si hay un audio anterior, detenerlo
+  if (this.currentEffectAudio) {
+    this.currentEffectAudio.pause();
+    this.currentEffectAudio.currentTime = 0;
   }
+
+  const audio = new Audio(`assets/Audios/${audioFile}`);
+  audio.play().catch(err => {
+    console.warn(`No se pudo reproducir el sonido ${audioFile}:`, err);
+  });
+
+  this.currentEffectAudio = audio;
+}
+override closeZoom() {
+  super.closeZoom(); // Ejecuta lo de ZoomablePage
+
+  if (this.currentEffectAudio) {
+    this.currentEffectAudio.pause();
+    this.currentEffectAudio.currentTime = 0;
+    this.currentEffectAudio = null;
+  }
+}
+
 }

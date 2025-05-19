@@ -31,17 +31,19 @@ export class ZoomablePage {
     }
   }
 
-  closeZoom = () => {
-    this.zoomedImgSrc = null;
+closeZoom() {
+  this.zoomedImgSrc = '';
 
-    if (this.overlayElement) {
-      this.overlayElement.remove();
-      this.overlayElement = null;
-    }
+  if (this.overlayElement) {
+    document.body.removeChild(this.overlayElement);
+    this.overlayElement = null;
+  }
 
-    // Eliminar el blur cuando se cierra el zoom
-    if (this.comicGridRef?.nativeElement) {
-      this.comicGridRef.nativeElement.classList.remove('blur');
-    }
-  };
+  if (this.comicGridRef?.nativeElement) {
+    this.comicGridRef.nativeElement.classList.remove('blur');
+  }
+
+  // Este método se sobrescribirá en Tab2Page para detener el audio
+}
+
 }

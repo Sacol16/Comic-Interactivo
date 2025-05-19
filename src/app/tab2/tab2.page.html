@@ -8,15 +8,15 @@
   <div class="comic-grid" #comicGrid>
 
     <div class="fila fila1">
-      <img src="assets/comics/pagina1/vineta1.jpg" class="vineta v1" (click)="toggleImageSize($event)" />
+      <img src="assets/comics/pagina1/vineta1.jpg" class="vineta v1" (click)="toggleImageSize($event); playSound('ambient-fantasy.mp3')" />
     </div>
     <div class="fila fila2">
-      <img src="assets/comics/pagina1/vineta2.jpg" class="vineta v2" (click)="toggleImageSize($event)" />
-      <img src="assets/comics/pagina1/vineta3.jpg" class="vineta v3" (click)="toggleImageSize($event)" />
+      <img src="assets/comics/pagina1/vineta2.jpg" class="vineta v2" (click)="toggleImageSize($event); playSound('ambient-fantasy.mp3')" />
+      <img src="assets/comics/pagina1/vineta3.jpg" class="vineta v3" (click)="toggleImageSize($event); playSound('Swish.mp3')" />
     </div>
     <div class="fila fila3">
-      <img src="assets/comics/pagina1/vineta4.jpg" class="vineta v4" (click)="toggleImageSize($event)" />
-      <img src="assets/comics/pagina1/vineta5.jpg" class="vineta v5" (click)="toggleImageSize($event); playCrashSound()" />
+      <img src="assets/comics/pagina1/vineta4.jpg" class="vineta v4" (click)="toggleImageSize($event); playSound('Swish.mp3')" />
+      <img src="assets/comics/pagina1/vineta5.jpg" class="vineta v5" (click)="toggleImageSize($event); playSound('box-crash.mp3')" />
     </div>
   </div>
 
