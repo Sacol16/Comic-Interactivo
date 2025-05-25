@@ -1,27 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="text-align: center;">Página 9/17</ion-title>
+    <ion-title style="text-align: center;">Página 9/16</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen class="ion-padding">
   <div class="comic-grid" #comicGrid>
   <div class="fila fila1">
-    <img src="assets/comics/pagina9/vineta1.jpg" class="vineta v1" (click)="toggleImageSize($event); playSound('box-crash.mp3')" />
-    <img src="assets/comics/pagina9/vineta2.jpg" class="vineta v2" (click)="toggleImageSize($event); playSound('box-crash.mp3')" />
+    <img src="assets/comics/pagina9/vineta1.jpg" class="vineta v1" (click)="toggleImageSize($event); playSound('Swish.mp3')" />
+    <img src="assets/comics/pagina9/vineta2.jpg" class="vineta v2" (click)="toggleImageSize($event); playSound('beep.mp3')" />
   </div>
   <div class="fila fila2">
     
-    <img src="assets/comics/pagina9/vineta3.jpg" class="vineta v3" (click)="toggleImageSize($event); playSound('box-crash.mp3')"/>
+    <img src="assets/comics/pagina9/vineta3.jpg" class="vineta v3" (click)="toggleImageSize($event); playSound('ambient-fantasy.mp3')"/>
   </div>
   <div class="fila fila3">
-    <img src="assets/comics/pagina9/vineta4.jpg" class="vineta v4" (click)="toggleImageSize($event); playSound('box-crash.mp3')"/>
+    <img src="assets/comics/pagina9/vineta4.jpg" class="vineta v4" (click)="toggleImageSize($event); playSound('flashbang.mp3')"/>
     
   </div>
 </div>
 
 <app-navigation-buttons prevPage="/tabs/tab9" nextPage="/tabs/tab12"
-[currentPage]="9" [totalPages]="17"></app-navigation-buttons>
+[currentPage]="9" [totalPages]="16"></app-navigation-buttons>
 <app-zoom-image [zoomedImgSrc]="zoomedImgSrc" [closeZoomCallback]="closeZoom.bind(this)"></app-zoom-image>
 
 </ion-content>

@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="text-align: center;">Página 1/17</ion-title>
+    <ion-title style="text-align: center;">Página 1/16</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,12 +16,12 @@
     </div>
     <div class="fila fila3">
       <img src="assets/comics/pagina1/vineta4.jpg" class="vineta v4" (click)="toggleImageSize($event); playSound('Swish.mp3')" />
-      <img src="assets/comics/pagina1/vineta5.jpg" class="vineta v5" (click)="toggleImageSize($event); playSound('box-crash.mp3')" />
+      <img src="assets/comics/pagina1/vineta5.jpg" class="vineta v5" (click)="toggleImageSize($event)" />
     </div>
   </div>
 
   <app-navigation-buttons prevPage="/tabs/tab1" nextPage="/tabs/tab3" 
-                          [currentPage]="1" [totalPages]="17"></app-navigation-buttons>
+                          [currentPage]="1" [totalPages]="16"></app-navigation-buttons>
   <app-zoom-image [zoomedImgSrc]="zoomedImgSrc" [closeZoomCallback]="closeZoom.bind(this)"></app-zoom-image>
 
 </ion-content>

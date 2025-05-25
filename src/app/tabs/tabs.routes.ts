@@ -17,7 +17,6 @@ import { Tab15Page } from '../tab15/tab15.page';
 import { Tab16Page } from '../tab16/tab16.page';
 import { Tab17Page } from '../tab17/tab17.page';
 import { Tab18Page } from '../tab18/tab18.page';
-import { Tab19Page } from '../tab19/tab19.page';
 export const routes: Routes = [
   {
     path: 'tabs',
@@ -40,7 +39,6 @@ export const routes: Routes = [
       { path: 'tab16', component: Tab16Page },
       { path: 'tab17', component: Tab17Page },
       { path: 'tab18', component: Tab18Page },
-      { path: 'tab19', component: Tab19Page },
       { path: '', redirectTo: 'tab1', pathMatch: 'full' }
     ]
   },

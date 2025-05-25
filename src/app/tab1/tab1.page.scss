@@ -7,7 +7,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;       // opcional, si quieres centrar verticalmente también
+    justify-content: flex-end;       // opcional, si quieres centrar verticalmente también
     text-align: center;
     padding: 20px;
   }
@@ -19,7 +19,7 @@
 
 }
 #boton2 {  
-    margin-top: 70%;
+    margin-bottom: -10%;
 
 }
 
